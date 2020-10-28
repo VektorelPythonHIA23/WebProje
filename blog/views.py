@@ -7,5 +7,6 @@ def gonderListe(request):
     return render(request,"blog/gonderilist.html",{"gonderis":gonderiler})
 
 def gonderiDetay(request,pk):
+    # gonderi = GonderiModel.objects.get(pk=pk)
     gonderi = get_object_or_404(GonderiModel,pk=pk)
     return render(request,"blog/gonderidetay.html",{"gonderi":gonderi})
