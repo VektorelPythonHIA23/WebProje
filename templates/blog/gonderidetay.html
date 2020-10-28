@@ -1,11 +1,9 @@
 
-{% for gonderi in gonderis %}
-<a href="{% url 'gonderiDetay' pk=gonderi.pk %}">
+
 <h1> {{gonderi.baslik}}</h1>
-</a>
 <p> {{gonderi.yazi}}</p>
 {{gonderi.olus_zaman}}
-{% endfor %}
+
 
 <a href="{% url 'gonderListe' %}"> Yenile </a>
 
