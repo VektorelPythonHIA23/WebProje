@@ -5,5 +5,6 @@ urlpatterns = [
     path('',views.gonderListe,name="gonderListe"),
     path('detay/<int:pk>',views.gonderiDetay,name="gonderiDetay"),
     path('yeni/',views.yeniGonderi,name="yeniGonderi"),
+    path('duzenle/<int:pk>',views.gonderiDuzenle,name="gonderiDuzenle"),
     
 ]
