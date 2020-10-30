@@ -1,10 +1,18 @@
+{% extends '../generic.html' %}
+
+{% block header %}
 
 
-<h1> {{gonderi.baslik}}</h1>
+						<h1> {{gonderi.baslik}}</h1>
+						{% endblock %}
+
+	{% block content %}
+    <span style="color:#000">
 <p> {{gonderi.yazi}}</p>
 {{gonderi.olus_zaman}}
-
+</span>
 
 <a href="{% url 'gonderListe' %}"> Yenile </a>
 
 
+{% endblock %}

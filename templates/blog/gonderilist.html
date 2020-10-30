@@ -1,12 +1,23 @@
+{% extends '../generic.html' %}
 
+{% block header %}
+
+						<p>___</p>
+						<h2>Gonderi Listesi</h2>
+						{% endblock %}
+	{% block content %}
 {% for gonderi in gonderis %}
+
 <a href="{% url 'gonderiDetay' pk=gonderi.pk %}">
 <h1> {{gonderi.baslik}}</h1>
 </a>
+<span style="color:#000">
 <p> {{gonderi.yazi}}</p>
 {{gonderi.olus_zaman}}
+</span>
 {% endfor %}
+
 
 <a href="{% url 'Ana' %}"> Ana Sayfa </a>
 
-
+{% endblock %}
