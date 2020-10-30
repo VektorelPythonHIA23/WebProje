@@ -6,6 +6,7 @@
 						<h2>Gonderi Listesi</h2>
 						{% endblock %}
 	{% block content %}
+	<a href="{% url 'yeniGonderi' %}"> Yeni Gönderi</a>
 {% for gonderi in gonderis %}
 
 <a href="{% url 'gonderiDetay' pk=gonderi.pk %}">
