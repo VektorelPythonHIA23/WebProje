@@ -21,7 +21,16 @@
 				<ul class="links">
 					<li><a href="{% url 'Ana' %}">Home</a></li>
 					<li><a href="{% url 'gonderListe' %}">Gönderi Listesi</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li>
+					{% if user.is_authenticated %}
+					<span style="color:#fff"><p> Merhaba {{user.username}}</p></span>
+					<a href="{% url 'logout' %}">Çıkış</a>
+					{% else %}
+					<a href="{% url 'login' %}">Üye Girişi</a><br>
+					<a href="{% url 'signup' %}">Kayıt Ol</a>
+					{% endif %}
+					
+					</li>
 				</ul>
 			</nav>
 		<!-- Banner -->
