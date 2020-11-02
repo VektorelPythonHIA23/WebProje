@@ -137,3 +137,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = str(BASE_DIR.joinpath("epostalar"))
+
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = str(BASE_DIR.joinpath("media"))

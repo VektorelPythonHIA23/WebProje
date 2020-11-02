@@ -25,10 +25,12 @@
 					<li><a href="{% url 'gonderListe' %}">Gönderi Listesi</a></li>
 					<li>
 					{% if user.is_authenticated %}
-					<span style="color:#fff"><p> Merhaba {{user.username}}</p></span>
-					<a href="{% url 'logout' %}">Çıkış</a>
+						<span style="color:#fff"><p> Merhaba {{user.username}}</p>
+						</span>
+						<a href="{% url 'logout' %}">Çıkış</a>
 					{% else %}
-					<a href="{% url 'login' %}">Üye Girişi</a>
+					<a href="{% url 'login' %}">Üye Girişi</a><br>
+					<a href="{% url 'signup' %}">Kayıt Ol</a>
 					{% endif %}
 					
 					</li>

@@ -5,8 +5,10 @@
 						<p>___</p>
 						<h2>Gonderi Listesi</h2>
 						{% endblock %}
-	{% block content %}
+{% block content %}
+	{% if user.is_authenticated %}
 	<a href="{% url 'yeniGonderi' %}"> Yeni Gönderi</a>
+	{% endif %}
 {% for gonderi in gonderis %}
 
 <a href="{% url 'gonderiDetay' pk=gonderi.pk %}">
@@ -17,8 +19,5 @@
 {{gonderi.olus_zaman}}
 </span>
 {% endfor %}
-
-
-<a href="{% url 'Ana' %}"> Ana Sayfa </a>
 
 {% endblock %}

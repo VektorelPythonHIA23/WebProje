@@ -19,8 +19,7 @@ def yeniGonderi(request):
         form = GonderiForm(request.POST)
         if form.is_valid():
             gonderi = form.save(commit=False)
-            ben = User.objects.get(username="admin")
-            gonderi.yazar = ben
+            gonderi.yazar = request.user
             gonderi.yayim_zaman = timezone.now()
             gonderi.save()
             return redirect('gonderListe')

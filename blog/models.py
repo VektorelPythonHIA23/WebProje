@@ -8,7 +8,7 @@ class GonderiModel(models.Model):
     yazi = models.TextField(verbose_name="Blog Metni")
     olus_zaman = models.DateTimeField(default=timezone.now,verbose_name="Oluşturma Zamanı")
     yayim_zaman = models.DateTimeField(blank=True,null=True,verbose_name="Yayımlanma Zamanı")
-
+    resim = models.ImageField(upload_to="resimler/",default="0")
     def yayimla(self):
         self.yayim_zaman = timezone.now()
         self.save()
